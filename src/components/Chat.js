@@ -15,7 +15,7 @@ const chatStyle = {
 const Chat = () => {
   return (
     <div style={chatStyle}>
-      <div style={{paddingLeft: 10, paddingTop: 10, fontSize: 30}}>Joli</div>
+      <div style={{paddingLeft: 10, paddingTop: 10, fontSize: 30}}>(pas) Joli Chat</div>
       <MessageList />
       <MessageBar />
     </div>
