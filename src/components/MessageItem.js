@@ -1,18 +1,21 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 const messageStyle = {
   fontWeight: 'bold',
 };
 
-const MessageItem = ({username, message}) => {
+const MessageItem = ({message}) => {
   return (
-      <li style={{backgroundColor: 'white'}}>
-          <dl>
-              <dd style={messageStyle}>{username}</dd>
-              <dt>{message}</dt>
-          </dl>
+      <li style={{backgroundColor: 'white', marginBottom: 10, borderRadius: 10}}>
+          <small style={messageStyle}>@{message.username}</small>
+          <div>{message.body}</div>
       </li>
   );
 }
+
+MessageItem.propTypes = {
+  message: PropTypes.string.isRequired,
+};
 
 export default MessageItem;
